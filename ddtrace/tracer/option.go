@@ -138,6 +138,9 @@ type config struct {
 
 	// enabled reports whether tracing is enabled.
 	enabled bool
+
+	// the base TUF roots metadata file for the remote config system
+	remoteConfigTUFRoot string
 }
 
 // HasFeature reports whether feature f is enabled.
@@ -725,6 +728,14 @@ func WithProfilerCodeHotspots(enabled bool) StartOption {
 func WithProfilerEndpoints(enabled bool) StartOption {
 	return func(c *config) {
 		c.profilerEndpoints = enabled
+	}
+}
+
+// WithRemoteConfigRoot defines the base TUF root metadata file. This is required
+// if you are using a service that relies on Remote Config within the tracer.
+func WithRemoteConfigTUFRoot(root string) StartOption {
+	return func(c *config) {
+		c.remoteConfigTUFRoot = root
 	}
 }
 
