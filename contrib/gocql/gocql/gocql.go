@@ -111,18 +111,17 @@ func (tq *Query) newChildSpan(ctx context.Context) ddtrace.Span {
 }
 
 func (tq *Query) finishSpan(span ddtrace.Span, err error) {
-	// ErrNotFound is technically an error from gocql point of view.
-	//
-	// However, it is returned when "no data is available", even if
-	// the request was perfectly correct and executed well. It is
-	// only a marker of "zero rows returned".
-	//
-	// So APM graphs/data can expose a very high error rate if queries
-	// happen to try and select data which is just not there.
 	if err == gocql.ErrNotFound {
+		// ErrNotFound is technically an error from gocql point of view.
+		//
+		// However, it is returned when "no data is available", even if
+		// the request was perfectly correct and executed well. It is
+		// only a marker of "zero rows returned".
+		//
+		// So APM graphs/data can expose a very high error rate if queries
+		// happen to try and select data which is just not there.
 		err = nil
 	}
-
 	if tq.params.config.noDebugStack {
 		span.Finish(tracer.WithError(err), tracer.NoDebugStack())
 	} else {
@@ -271,11 +270,10 @@ func (tb *Batch) newChildSpan(ctx context.Context) ddtrace.Span {
 }
 
 func (tb *Batch) finishSpan(span ddtrace.Span, err error) {
-	// ErrNotFound only means 0 rows found matching the selector.
 	if err == gocql.ErrNotFound {
+		// ErrNotFound only means 0 rows found matching the selector.
 		err = nil
 	}
-
 	if tb.params.config.noDebugStack {
 		span.Finish(tracer.WithError(err), tracer.NoDebugStack())
 	} else {
