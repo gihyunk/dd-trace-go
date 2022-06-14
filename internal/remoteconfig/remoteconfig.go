@@ -8,8 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/remoteconfigpb"
+	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
 )
 
 var client http.Client
@@ -103,7 +102,7 @@ func (c *Client) updateState() {
 		return
 	}
 
-	var update remoteconfigpb.ClientGetConfigsResponse
+	var update ClientGetConfigsResponse
 	err = json.NewDecoder(resp.Body).Decode(&update)
 	if err != nil {
 		c.lastError = err
@@ -119,7 +118,7 @@ func (c *Client) updateState() {
 	}
 }
 
-func (c *Client) applyUpdate(pbUpdate *remoteconfigpb.ClientGetConfigsResponse) error {
+func (c *Client) applyUpdate(pbUpdate *ClientGetConfigsResponse) error {
 	fileMap := make(map[string][]byte, len(pbUpdate.TargetFiles))
 	for _, f := range pbUpdate.TargetFiles {
 		fileMap[f.Path] = f.Raw
@@ -132,8 +131,14 @@ func (c *Client) applyUpdate(pbUpdate *remoteconfigpb.ClientGetConfigsResponse) 
 		ClientConfigs: pbUpdate.ClientConfigs,
 	}
 
-	// At the moment we aren't hooking this into any services, however
-	// once we do we will need to update them based on the results here.
+	// XXX: At the moment we aren't hooking this into any tracer services, however
+	// once we do we will need to update them based on the results from Update
+	// (which is an array of product names that were updated during the request)
+	//
+	// The agent client does this by allowing services to register callback functions that receive
+	// map[string]<CONFIG_TYPE>. The client provides a "register listener" function for each supported
+	// product which stores the callbacks in a list. It's up to the service to use goroutines as needed
+	// if the update application process would block the RC client for too long.
 	_, err := c.repository.Update(update)
 
 	return err
@@ -145,16 +150,16 @@ func (c *Client) newUpdateRequest() (bytes.Buffer, error) {
 		return bytes.Buffer{}, err
 	}
 
-	pbCachedFiles := make([]*remoteconfigpb.TargetFileMeta, 0, len(state.CachedFiles))
+	pbCachedFiles := make([]*TargetFileMeta, 0, len(state.CachedFiles))
 	for _, f := range state.CachedFiles {
-		pbHashes := make([]*remoteconfigpb.TargetFileHash, 0, len(f.Hashes))
+		pbHashes := make([]*TargetFileHash, 0, len(f.Hashes))
 		for alg, hash := range f.Hashes {
-			pbHashes = append(pbHashes, &remoteconfigpb.TargetFileHash{
+			pbHashes = append(pbHashes, &TargetFileHash{
 				Algorithm: alg,
 				Hash:      hash,
 			})
 		}
-		pbCachedFiles = append(pbCachedFiles, &remoteconfigpb.TargetFileMeta{
+		pbCachedFiles = append(pbCachedFiles, &TargetFileMeta{
 			Path:   f.Path,
 			Length: int64(f.Length),
 			Hashes: pbHashes,
@@ -167,18 +172,18 @@ func (c *Client) newUpdateRequest() (bytes.Buffer, error) {
 		errMsg = c.lastError.Error()
 	}
 
-	pbConfigState := make([]*remoteconfigpb.ConfigState, 0, len(state.Configs))
+	pbConfigState := make([]*ConfigState, 0, len(state.Configs))
 	for _, f := range state.Configs {
-		pbConfigState = append(pbConfigState, &remoteconfigpb.ConfigState{
+		pbConfigState = append(pbConfigState, &ConfigState{
 			Id:      f.ID,
 			Version: f.Version,
 			Product: f.Product,
 		})
 	}
 
-	req := remoteconfigpb.ClientGetConfigsRequest{
-		Client: &remoteconfigpb.Client{
-			State: &remoteconfigpb.ClientState{
+	req := ClientGetConfigsRequest{
+		Client: &ClientData{
+			State: &ClientState{
 				RootVersion:    uint64(state.RootsVersion),
 				TargetsVersion: uint64(state.TargetsVersion),
 				ConfigStates:   pbConfigState,
@@ -188,7 +193,7 @@ func (c *Client) newUpdateRequest() (bytes.Buffer, error) {
 			Id:       c.clientID,
 			Products: []string{"LIVE_DEBUGGING"},
 			IsTracer: true,
-			ClientTracer: &remoteconfigpb.ClientTracer{
+			ClientTracer: &ClientTracer{
 				RuntimeId:     c.RuntimeID,
 				Language:      "golang",
 				TracerVersion: c.TracerVersion,

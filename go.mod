@@ -2,9 +2,9 @@ module gopkg.in/DataDog/dd-trace-go.v1
 
 go 1.16
 
-require github.com/DataDog/datadog-agent/pkg/remoteconfig v0.0.0-unpublished
+require github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.0.0-unpublished
 
-replace github.com/DataDog/datadog-agent/pkg/remoteconfig => /Users/kyle.ames/code/worktrees/agent-rfc-experiment
+replace github.com/DataDog/datadog-agent/pkg/remoteconfig/state => /Users/kyle.ames/code/worktrees/agent-rfc-experiment/pkg/remoteconfig/state
 
 require (
 	cloud.google.com/go/pubsub v1.4.0
