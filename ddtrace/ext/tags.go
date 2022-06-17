@@ -36,6 +36,21 @@ const (
 	// HTTPURL sets the HTTP URL for a span.
 	HTTPURL = "http.url"
 
+	// HTTPURLHost is the host part of the HTTP request's URL.
+	HTTPURLHost = "http.url_details.host"
+
+	// HTTPURLPath is the path part of the HTTP request's URL.
+	HTTPURLPath = "http.url_details.path"
+
+	// HTTPURLScheme is the scheme part of the HTTP request's URL.
+	HTTPURLScheme = "http.url_details.scheme"
+
+	// HTTPURLQueryString is the query string part of the HTTP request's URL.
+	HTTPURLQueryString = "http.url_details.query_string"
+
+	// HTTPURLPort is the port part of the HTTP request's URL.
+	HTTPURLPort = "http.url_details.port"
+
 	// HTTPUserAgent is the user agent header value of the HTTP request.
 	HTTPUserAgent = "http.useragent"
 

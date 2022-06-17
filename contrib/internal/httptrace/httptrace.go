@@ -12,7 +12,6 @@ import (
 	"fmt"
 	"net"
 	"net/http"
-	"os"
 	"strconv"
 	"strings"
 
@@ -38,7 +37,7 @@ var (
 		"via",
 		"true-client-ip",
 	}
-	clientIPHeader = os.Getenv("DD_TRACE_CLIENT_IP_HEADER")
+	cfg = newConfig()
 )
 
 // StartRequestSpan starts an HTTP request span with the standard list of HTTP request span tags (http.method, http.url,
@@ -52,6 +51,9 @@ func StartRequestSpan(r *http.Request, opts ...ddtrace.StartSpanOption) (tracer.
 		tracer.Tag(ext.HTTPUserAgent, r.UserAgent()),
 		tracer.Measured(),
 	}, opts...)
+	for k, v := range getURLSpanTags(r) {
+		opts = append([]ddtrace.StartSpanOption{tracer.Tag(k, v)}, opts...)
+	}
 	if r.Host != "" {
 		opts = append([]ddtrace.StartSpanOption{
 			tracer.Tag("http.host", r.Host),
@@ -93,8 +95,8 @@ func ippref(s string) *netaddr.IPPrefix {
 // getClientIP attempts to find the client IP address in the given request r.
 func getClientIP(r *http.Request) netaddr.IP {
 	ipHeaders := defaultIPHeaders
-	if len(clientIPHeader) > 0 {
-		ipHeaders = []string{clientIPHeader}
+	if len(cfg.clientIPHeader) > 0 {
+		ipHeaders = []string{cfg.clientIPHeader}
 	}
 	check := func(s string) netaddr.IP {
 		for _, ipstr := range strings.Split(s, ",") {
@@ -147,4 +149,48 @@ func isGlobal(ip netaddr.IP) bool {
 		}
 	}
 	return isGlobal
+}
+
+// getURLSpanTags generates the list of standard span tags related to http.url and http.url_details.*
+// For more information see https://datadoghq.atlassian.net/wiki/spaces/APM/pages/2357395856/Span+attributes#http.url
+func getURLSpanTags(r *http.Request) map[string]string {
+	// Quoting net/http comments about net.Request.URL:
+	// "For most requests, fields other than Path and RawQuery will be
+	// empty. (See RFC 7230, Section 5.3)"
+	// This is why we don't rely on url.URL.String(), url.URL.Host, url.URL.Scheme, etc...
+	scheme := "http"
+	port := "80"
+	host := r.Host
+	path := r.URL.EscapedPath()
+	var url strings.Builder
+	if r.TLS != nil {
+		scheme = "https"
+		port = "443"
+	}
+	if h, p, err := net.SplitHostPort(host); err == nil {
+		host = h
+		port = p
+	}
+	for _, str := range []string{scheme, "://", host, path} {
+		url.WriteString(str)
+	}
+	tags := map[string]string{
+		ext.HTTPURLHost:   host,
+		ext.HTTPURLPath:   path,
+		ext.HTTPURLScheme: scheme,
+		ext.HTTPURLPort:   port,
+	}
+	// Return early if no query string found or if obfuscation is disabled
+	if r.URL.RawQuery == "" || cfg.queryStringObfRegexp == nil {
+		tags[ext.HTTPURL] = url.String()
+		return tags
+	}
+	// Obfuscate the query string before building the final URL
+	// https://datadoghq.atlassian.net/wiki/spaces/APS/pages/2490990623/QueryString+-+Sensitive+Data+Obfuscation
+	query := cfg.queryStringObfRegexp.ReplaceAllLiteralString(r.URL.RawQuery, "<redacted>")
+	tags[ext.HTTPURLQueryString] = query
+	url.WriteString("?")
+	url.WriteString(query)
+	tags[ext.HTTPURL] = url.String()
+	return tags
 }
