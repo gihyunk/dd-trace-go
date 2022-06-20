@@ -10,9 +10,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gihyunk/dd-trace-go.v1/appsec"
-	echotrace "github.com/gihyunk/dd-trace-go.v1/contrib/labstack/echo.v4"
-	httptrace "github.com/gihyunk/dd-trace-go.v1/contrib/net/http"
+	"github.com/gihyunk/dd-trace-go/appsec"
+	echotrace "github.com/gihyunk/dd-trace-go/contrib/labstack/echo.v4"
+	httptrace "github.com/gihyunk/dd-trace-go/contrib/net/http"
 
 	"github.com/labstack/echo/v4"
 )

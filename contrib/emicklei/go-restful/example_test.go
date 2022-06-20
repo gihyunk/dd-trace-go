@@ -12,8 +12,8 @@ import (
 
 	"github.com/emicklei/go-restful"
 
-	restfultrace "github.com/gihyunk/dd-trace-go.v1/contrib/emicklei/go-restful"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	restfultrace "github.com/gihyunk/dd-trace-go/contrib/emicklei/go-restful"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 )
 
 // To start tracing requests, add the trace filter to your go-restful router.

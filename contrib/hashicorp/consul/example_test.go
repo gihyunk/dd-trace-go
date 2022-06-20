@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 
 	consul "github.com/hashicorp/consul/api"
 )

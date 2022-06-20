@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go/ddtrace"
 
 	"github.com/stretchr/testify/assert"
 )

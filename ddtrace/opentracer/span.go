@@ -8,9 +8,9 @@ package opentracer
 import (
 	"fmt"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/log"

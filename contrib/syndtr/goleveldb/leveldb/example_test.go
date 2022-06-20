@@ -8,8 +8,8 @@ package leveldb_test
 import (
 	"context"
 
-	leveldbtrace "github.com/gihyunk/dd-trace-go.v1/contrib/syndtr/goleveldb/leveldb"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	leveldbtrace "github.com/gihyunk/dd-trace-go/contrib/syndtr/goleveldb/leveldb"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 )
 
 func Example() {

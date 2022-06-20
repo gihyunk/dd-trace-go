@@ -8,7 +8,7 @@ package profiler_test
 import (
 	"log"
 
-	"github.com/gihyunk/dd-trace-go.v1/profiler"
+	"github.com/gihyunk/dd-trace-go/profiler"
 )
 
 // This example illustrates how to run (and later stop) the Datadog Profiler.

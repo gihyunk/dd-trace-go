@@ -16,10 +16,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go/ddtrace"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/internal/log"
 
 	"github.com/go-redis/redis"
 )

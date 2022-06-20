@@ -10,10 +10,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	httptrace "github.com/gihyunk/dd-trace-go.v1/contrib/net/http"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
-	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
+	httptrace "github.com/gihyunk/dd-trace-go/contrib/net/http"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
 
 	"github.com/stretchr/testify/assert"
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"

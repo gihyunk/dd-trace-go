@@ -12,8 +12,8 @@ import (
 
 	"github.com/gomodule/redigo/redis"
 
-	redigotrace "github.com/gihyunk/dd-trace-go.v1/contrib/gomodule/redigo"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	redigotrace "github.com/gihyunk/dd-trace-go/contrib/gomodule/redigo"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 )
 
 // To start tracing Redis commands, use the TracedDial function to create a connection,

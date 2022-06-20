@@ -8,7 +8,7 @@ package pg_test
 import (
 	"log"
 
-	pgtrace "github.com/gihyunk/dd-trace-go.v1/contrib/go-pg/pg.v10"
+	pgtrace "github.com/gihyunk/dd-trace-go/contrib/go-pg/pg.v10"
 
 	"github.com/go-pg/pg/v10"
 )

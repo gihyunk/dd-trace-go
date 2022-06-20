@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/profiler/internal/pprofutils"
+	"github.com/gihyunk/dd-trace-go/profiler/internal/pprofutils"
 
 	pprofile "github.com/google/pprof/profile"
 	"github.com/stretchr/testify/assert"

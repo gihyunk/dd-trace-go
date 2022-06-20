@@ -18,9 +18,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	traceinternal "github.com/gihyunk/dd-trace-go.v1/ddtrace/internal"
-	"github.com/gihyunk/dd-trace-go.v1/internal"
-	"github.com/gihyunk/dd-trace-go.v1/internal/version"
+	traceinternal "github.com/gihyunk/dd-trace-go/ddtrace/internal"
+	"github.com/gihyunk/dd-trace-go/internal"
+	"github.com/gihyunk/dd-trace-go/internal/version"
 
 	"github.com/tinylib/msgp/msgp"
 )

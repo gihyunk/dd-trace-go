@@ -10,8 +10,8 @@ import (
 
 	"github.com/confluentinc/confluent-kafka-go/kafka"
 
-	kafkatrace "github.com/gihyunk/dd-trace-go.v1/contrib/confluentinc/confluent-kafka-go/kafka"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	kafkatrace "github.com/gihyunk/dd-trace-go/contrib/confluentinc/confluent-kafka-go/kafka"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 )
 
 var (

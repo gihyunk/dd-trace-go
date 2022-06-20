@@ -9,17 +9,17 @@
 // https://godoc.org/github.com/graph-gophers/graphql-go/trace subpackage.
 // Create a new Tracer with `NewTracer` and pass it as an additional option to
 // `MustParseSchema`.
-package graphql // import "github.com/gihyunk/dd-trace-go.v1/contrib/graph-gophers/graphql-go"
+package graphql // import "github.com/gihyunk/dd-trace-go/contrib/graph-gophers/graphql-go"
 
 import (
 	"context"
 	"fmt"
 	"math"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go/ddtrace"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/internal/log"
 
 	"github.com/graph-gophers/graphql-go/errors"
 	"github.com/graph-gophers/graphql-go/introspection"

@@ -11,10 +11,10 @@ import (
 
 	opentracing "github.com/opentracing/opentracing-go"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/opentracer"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/opentracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 )
 
 // The below example illustrates a simple use case using the "tracer" package,

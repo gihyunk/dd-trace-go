@@ -13,11 +13,11 @@ import (
 	"strings"
 	"testing"
 
-	pappsec "github.com/gihyunk/dd-trace-go.v1/appsec"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
+	pappsec "github.com/gihyunk/dd-trace-go/appsec"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/internal/appsec"
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"

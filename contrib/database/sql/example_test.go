@@ -11,9 +11,9 @@ import (
 
 	sqlite "github.com/mattn/go-sqlite3" // Setup application to use Sqlite
 
-	sqltrace "github.com/gihyunk/dd-trace-go.v1/contrib/database/sql"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	sqltrace "github.com/gihyunk/dd-trace-go/contrib/database/sql"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/lib/pq"

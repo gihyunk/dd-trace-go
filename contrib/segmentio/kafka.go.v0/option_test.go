@@ -9,7 +9,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
 
 	"github.com/stretchr/testify/assert"
 )

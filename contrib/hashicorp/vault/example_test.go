@@ -10,7 +10,7 @@ import (
 	"log"
 	"net/http"
 
-	vaulttrace "github.com/gihyunk/dd-trace-go.v1/contrib/hashicorp/vault"
+	vaulttrace "github.com/gihyunk/dd-trace-go/contrib/hashicorp/vault"
 
 	"github.com/hashicorp/vault/api"
 )

@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
 )
 
 func TestAnalyticsSettings(t *testing.T) {

@@ -15,9 +15,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
-	"github.com/gihyunk/dd-trace-go.v1/internal/samplernames"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go/internal/samplernames"
 )
 
 func setupteardown(start, max int) func() {

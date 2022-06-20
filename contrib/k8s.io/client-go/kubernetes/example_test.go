@@ -13,7 +13,7 @@ import (
 	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc"
 	"k8s.io/client-go/rest"
 
-	kubernetestrace "github.com/gihyunk/dd-trace-go.v1/contrib/k8s.io/client-go/kubernetes"
+	kubernetestrace "github.com/gihyunk/dd-trace-go/contrib/k8s.io/client-go/kubernetes"
 )
 
 func Example() {
