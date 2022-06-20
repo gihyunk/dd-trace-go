@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 // defaultMetricsReportInterval specifies the interval at which runtime metrics will

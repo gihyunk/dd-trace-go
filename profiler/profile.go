@@ -13,8 +13,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/profiler/internal/extensions"
-	"github.com/gihyunk/dd-trace-go/profiler/internal/pprofutils"
+	"github.com/gihyunk/dd-trace-go.v1/profiler/internal/extensions"
+	"github.com/gihyunk/dd-trace-go.v1/profiler/internal/pprofutils"
 
 	"github.com/DataDog/gostackparse"
 	pprofile "github.com/google/pprof/profile"

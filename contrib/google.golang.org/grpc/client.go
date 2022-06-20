@@ -8,11 +8,11 @@ package grpc
 import (
 	"net"
 
-	"github.com/gihyunk/dd-trace-go/contrib/google.golang.org/internal/grpcutil"
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/contrib/google.golang.org/internal/grpcutil"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 
 	context "golang.org/x/net/context"
 	"google.golang.org/grpc"

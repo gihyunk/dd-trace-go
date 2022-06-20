@@ -9,10 +9,10 @@ import (
 	"encoding/json"
 	"net"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation/grpcsec"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation/httpsec"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/grpcsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
 
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

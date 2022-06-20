@@ -17,13 +17,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation/grpcsec"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation/httpsec"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/waf"
-	"github.com/gihyunk/dd-trace-go/internal/log"
-	"github.com/gihyunk/dd-trace-go/internal/samplernames"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/grpcsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/waf"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/samplernames"
 )
 
 const (

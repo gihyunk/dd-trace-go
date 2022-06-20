@@ -8,7 +8,7 @@ package mgo
 import (
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
 
 	"github.com/globalsign/mgo"
 )

@@ -11,8 +11,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/gihyunk/dd-trace-go/internal"
-	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go.v1/internal"
+	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
 )
 
 type config struct {

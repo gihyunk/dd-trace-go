@@ -11,11 +11,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/internal"
-	"github.com/gihyunk/dd-trace-go/internal/log"
-	"github.com/gihyunk/dd-trace-go/internal/samplernames"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/internal"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/samplernames"
 )
 
 var _ ddtrace.SpanContext = (*spanContext)(nil)

@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/traceprof"
-	pb "github.com/gihyunk/dd-trace-go/internal/traceprof/testapp"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/traceprof"
+	pb "github.com/gihyunk/dd-trace-go.v1/internal/traceprof/testapp"
 
 	"github.com/stretchr/testify/require"
 )

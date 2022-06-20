@@ -8,7 +8,7 @@ package echo
 import (
 	"math"
 
-	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
 )
 
 type config struct {

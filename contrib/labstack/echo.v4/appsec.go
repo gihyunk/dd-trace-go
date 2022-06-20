@@ -8,9 +8,9 @@ package echo
 import (
 	"net"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation/httpsec"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
 
 	"github.com/labstack/echo/v4"
 )

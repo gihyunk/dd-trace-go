@@ -18,10 +18,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation"
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 // Abstract HTTP handler operation definition.

@@ -11,8 +11,8 @@ package appsec
 import (
 	"sync"
 
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo"
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 // Enabled returns true when AppSec is up and running. Meaning that the appsec build tag is enabled, the env var

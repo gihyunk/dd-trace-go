@@ -10,8 +10,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
 )
 
 // SetAppSecTags sets the AppSec-specific span tags that are expected to be in

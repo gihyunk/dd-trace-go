@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 // random holds a thread-safe source of random numbers.

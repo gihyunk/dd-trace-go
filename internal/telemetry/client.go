@@ -21,10 +21,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/internal"
-	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
-	"github.com/gihyunk/dd-trace-go/internal/osinfo"
-	"github.com/gihyunk/dd-trace-go/internal/version"
+	"github.com/gihyunk/dd-trace-go.v1/internal"
+	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go.v1/internal/osinfo"
+	"github.com/gihyunk/dd-trace-go.v1/internal/version"
 )
 
 var (

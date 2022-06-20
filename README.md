@@ -1,5 +1,5 @@
 [![CircleCI](https://circleci.com/gh/DataDog/dd-trace-go/tree/v1.svg?style=svg)](https://circleci.com/gh/DataDog/dd-trace-go/tree/v1)
-[![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/gihyunk/dd-trace-go/ddtrace)
+[![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/gihyunk/dd-trace-go.v1/ddtrace)
 [![codecov](https://codecov.io/gh/DataDog/dd-trace-go/branch/v1/graph/badge.svg?token=jGG20Xhv8i)](https://codecov.io/gh/DataDog/dd-trace-go)
 
 ### Installing
@@ -7,21 +7,21 @@
 This module contains many packages, but most users should probably install the two packages below:
 
 ```bash
-go get github.com/gihyunk/dd-trace-go/ddtrace/tracer
-go get github.com/gihyunk/dd-trace-go/profiler
+go get github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer
+go get github.com/gihyunk/dd-trace-go.v1/profiler
 ```
 
 Additionally there are many [contrib](./contrib) packages that can be installed as needed like this:
 
 ```
-go get github.com/gihyunk/dd-trace-go/contrib/gorilla/mux
+go get github.com/gihyunk/dd-trace-go.v1/contrib/gorilla/mux
 ```
 
 If you installed more packages than you intended, you can use `go mod tidy` to remove any unused packages.
 
 ### Documentation
 
- - [API](https://pkg.go.dev/github.com/gihyunk/dd-trace-go/ddtrace)
+ - [API](https://pkg.go.dev/github.com/gihyunk/dd-trace-go.v1/ddtrace)
  - [Tracing Go Applications](https://docs.datadoghq.com/tracing/setup/go/)
  - [Continuous Go Profiler](https://docs.datadoghq.com/tracing/profiler/enabling/go).
  - If you are migrating from an older version of the tracer (e.g. 0.6.x) you may also find the [migration document](MIGRATING.md) we've put together helpful.

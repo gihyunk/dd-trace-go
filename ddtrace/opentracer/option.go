@@ -3,10 +3,10 @@
 // This product includes software developed at Datadog (https://www.datadoghq.com/).
 // Copyright 2016 Datadog, Inc.
 
-package opentracer // import "github.com/gihyunk/dd-trace-go/ddtrace/opentracer"
+package opentracer // import "github.com/gihyunk/dd-trace-go.v1/ddtrace/opentracer"
 
 import (
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
 
 	opentracing "github.com/opentracing/opentracing-go"
 )

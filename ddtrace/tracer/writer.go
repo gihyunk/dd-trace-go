@@ -16,7 +16,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 type traceWriter interface {

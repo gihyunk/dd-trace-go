@@ -3,15 +3,15 @@
 // This product includes software developed at Datadog (https://www.datadoghq.com/).
 // Copyright 2016 Datadog, Inc.
 
-package mocktracer // import "github.com/gihyunk/dd-trace-go/ddtrace/mocktracer"
+package mocktracer // import "github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
 
 import (
 	"fmt"
 	"sync"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
 )
 
 var _ ddtrace.Span = (*mockspan)(nil)

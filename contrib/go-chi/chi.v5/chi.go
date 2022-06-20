@@ -4,18 +4,18 @@
 // Copyright 2016 Datadog, Inc.
 
 // Package chi provides tracing functions for tracing the go-chi/chi/v5 package (https://github.com/go-chi/chi).
-package chi // import "github.com/gihyunk/dd-trace-go/contrib/go-chi/chi.v5"
+package chi // import "github.com/gihyunk/dd-trace-go.v1/contrib/go-chi/chi.v5"
 
 import (
 	"fmt"
 	"math"
 	"net/http"
 
-	"github.com/gihyunk/dd-trace-go/contrib/internal/httptrace"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/appsec"
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/contrib/internal/httptrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"

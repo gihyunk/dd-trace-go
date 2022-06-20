@@ -13,9 +13,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/appsec"
-	"github.com/gihyunk/dd-trace-go/internal/appsec/waf"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/waf"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

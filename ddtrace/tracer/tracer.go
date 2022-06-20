@@ -14,12 +14,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/internal"
-	"github.com/gihyunk/dd-trace-go/internal/appsec"
-	"github.com/gihyunk/dd-trace-go/internal/log"
-	"github.com/gihyunk/dd-trace-go/internal/traceprof"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/internal"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/traceprof"
 
 	"github.com/DataDog/datadog-agent/pkg/obfuscate"
 )

@@ -15,12 +15,12 @@ import (
 	"strings"
 	"testing"
 
-	pappsec "github.com/gihyunk/dd-trace-go/appsec"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/mocktracer"
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/appsec"
-	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
+	pappsec "github.com/gihyunk/dd-trace-go.v1/appsec"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"

@@ -11,10 +11,10 @@ import (
 	"math"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go/ddtrace"
-	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 
 	"gorm.io/gorm"
 )
@@ -26,7 +26,7 @@ const (
 )
 
 // Open opens a new (traced) database connection. The used driver must be formerly registered
-// using (github.com/gihyunk/dd-trace-go/contrib/database/sql).Register.
+// using (github.com/gihyunk/dd-trace-go.v1/contrib/database/sql).Register.
 func Open(dialector gorm.Dialector, cfg *gorm.Config, opts ...Option) (*gorm.DB, error) {
 	db, err := gorm.Open(dialector, cfg)
 	if err != nil {
