@@ -13,9 +13,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/samplernames"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/internal/samplernames"
 )
 
 func TestSetSecurityEventTags(t *testing.T) {

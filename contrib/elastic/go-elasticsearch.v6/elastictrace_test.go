@@ -16,8 +16,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
 )
 
 const debug = false

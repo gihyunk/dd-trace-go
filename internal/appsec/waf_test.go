@@ -16,10 +16,10 @@ import (
 	"strings"
 	"testing"
 
-	pAppsec "gopkg.in/DataDog/dd-trace-go.v1/appsec"
-	httptrace "gopkg.in/DataDog/dd-trace-go.v1/contrib/net/http"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/mocktracer"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec"
+	pAppsec "github.com/gihyunk/dd-trace-go.v1/appsec"
+	httptrace "github.com/gihyunk/dd-trace-go.v1/contrib/net/http"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
 
 	"github.com/stretchr/testify/require"
 )

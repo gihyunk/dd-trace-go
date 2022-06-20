@@ -9,8 +9,8 @@ import (
 	"math"
 	"os"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal"
 )
 
 type config struct {

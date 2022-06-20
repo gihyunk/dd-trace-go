@@ -15,10 +15,10 @@ import (
 	"net/url"
 	"strconv"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 
 	redis "github.com/garyburd/redigo/redis"
 )

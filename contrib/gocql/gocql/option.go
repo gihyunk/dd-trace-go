@@ -8,7 +8,7 @@ package gocql
 import (
 	"math"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/internal"
+	"github.com/gihyunk/dd-trace-go.v1/internal"
 )
 
 type queryConfig struct {

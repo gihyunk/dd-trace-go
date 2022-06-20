@@ -14,8 +14,8 @@ package appsec
 import (
 	"context"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
 )
 
 // MonitorParsedHTTPBody runs the security monitoring rules on the given *parsed*

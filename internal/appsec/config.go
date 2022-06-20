@@ -15,7 +15,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 const (

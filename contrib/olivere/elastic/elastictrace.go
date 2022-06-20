@@ -4,7 +4,7 @@
 // Copyright 2016 Datadog, Inc.
 
 // Package elastic provides functions to trace the gopkg.in/olivere/elastic.v{3,5} packages.
-package elastic // import "gopkg.in/DataDog/dd-trace-go.v1/contrib/olivere/elastic"
+package elastic // import "github.com/gihyunk/dd-trace-go.v1/contrib/olivere/elastic"
 
 import (
 	"bufio"
@@ -19,10 +19,10 @@ import (
 	"regexp"
 	"strconv"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/ext"
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 // NewHTTPClient returns a new http.Client which traces requests under the given service name.

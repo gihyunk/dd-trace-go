@@ -13,8 +13,8 @@ import (
 	"encoding/json"
 	"reflect"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec/dyngo"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
 )
 
 // Abstract gRPC server handler operation definitions. It is based on two

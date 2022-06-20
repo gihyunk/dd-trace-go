@@ -9,10 +9,10 @@ import (
 	"encoding/json"
 	"net"
 
-	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
-	"gopkg.in/DataDog/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation/httpsec"
+	"github.com/gihyunk/dd-trace-go.v1/internal/log"
 )
 
 // SetSecurityEventTags sets the AppSec-specific span tags when a security event
