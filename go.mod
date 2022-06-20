@@ -19,7 +19,7 @@ require (
 	github.com/confluentinc/confluent-kafka-go v1.4.0
 	github.com/denisenkom/go-mssqldb v0.11.0
 	github.com/elastic/go-elasticsearch/v6 v6.8.5
-	github.com/elastic/go-elasticsearch/v7 v7.17.1
+	github.com/elastic/go-elasticsearch/v7 v7.12.0
 	github.com/emicklei/go-restful v0.0.0-20170410110728-ff4f55a20633
 	github.com/erikstmartin/go-testdb v0.0.0-20160219214506-8d10e4a1bae5 // indirect
 	github.com/fatih/color v1.9.0 // indirect
@@ -73,7 +73,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pierrec/lz4 v2.5.2+incompatible // indirect
-	github.com/segmentio/kafka-go v0.4.29
+	github.com/segmentio/kafka-go v0.3.6
 	github.com/sirupsen/logrus v1.7.0
 	github.com/stretchr/testify v1.7.0
 	github.com/syndtr/goleveldb v1.0.0
