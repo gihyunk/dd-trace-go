@@ -13,8 +13,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/dyngo/instrumentation"
-	"github.com/gihyunk/dd-trace-go.v1/internal/appsec/waf"
+	"github.com/gihyunk/dd-trace-go/internal/appsec/dyngo/instrumentation"
+	"github.com/gihyunk/dd-trace-go/internal/appsec/waf"
 )
 
 // Test that internal functions used to set span tags use the correct types

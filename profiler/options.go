@@ -20,11 +20,11 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal"
-	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
-	"github.com/gihyunk/dd-trace-go.v1/internal/osinfo"
-	"github.com/gihyunk/dd-trace-go.v1/internal/version"
+	"github.com/gihyunk/dd-trace-go/internal"
+	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go/internal/osinfo"
+	"github.com/gihyunk/dd-trace-go/internal/version"
 
 	"github.com/DataDog/datadog-go/v5/statsd"
 )

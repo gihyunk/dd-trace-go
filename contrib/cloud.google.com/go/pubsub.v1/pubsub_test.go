@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/mocktracer"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/ddtrace/mocktracer"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
 
 	"cloud.google.com/go/pubsub"
 	"cloud.google.com/go/pubsub/pstest"

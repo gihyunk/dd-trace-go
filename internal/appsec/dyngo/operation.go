@@ -26,7 +26,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go/internal/log"
 )
 
 // Operation interface type allowing to register event listeners to the

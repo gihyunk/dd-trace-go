@@ -1,4 +1,4 @@
-module github.com/gihyunk/dd-trace-go.v1
+module github.com/gihyunk/dd-trace-go
 
 go 1.16
 

@@ -19,13 +19,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/ext"
-	"github.com/gihyunk/dd-trace-go.v1/internal"
-	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
-	"github.com/gihyunk/dd-trace-go.v1/internal/traceprof"
-	"github.com/gihyunk/dd-trace-go.v1/internal/version"
+	"github.com/gihyunk/dd-trace-go/ddtrace"
+	"github.com/gihyunk/dd-trace-go/ddtrace/ext"
+	"github.com/gihyunk/dd-trace-go/internal"
+	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go/internal/log"
+	"github.com/gihyunk/dd-trace-go/internal/traceprof"
+	"github.com/gihyunk/dd-trace-go/internal/version"
 
 	"github.com/DataDog/datadog-go/v5/statsd"
 )

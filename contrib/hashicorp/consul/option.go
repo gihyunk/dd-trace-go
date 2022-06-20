@@ -8,7 +8,7 @@ package consul
 import (
 	"math"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal"
+	"github.com/gihyunk/dd-trace-go/internal"
 )
 
 const (

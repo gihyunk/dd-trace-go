@@ -8,7 +8,7 @@ package tracer
 import (
 	"errors"
 
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace"
+	"github.com/gihyunk/dd-trace-go/ddtrace"
 )
 
 // Propagator implementations should be able to inject and extract

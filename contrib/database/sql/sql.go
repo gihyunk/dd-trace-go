@@ -25,9 +25,9 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/contrib/database/sql/internal"
-	"github.com/gihyunk/dd-trace-go.v1/ddtrace/tracer"
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go/contrib/database/sql/internal"
+	"github.com/gihyunk/dd-trace-go/ddtrace/tracer"
+	"github.com/gihyunk/dd-trace-go/internal/log"
 )
 
 // registeredDrivers holds a registry of all drivers registered via the sqltrace package.

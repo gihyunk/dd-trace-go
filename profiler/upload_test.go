@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal/globalconfig"
-	"github.com/gihyunk/dd-trace-go.v1/internal/version"
+	"github.com/gihyunk/dd-trace-go/internal/globalconfig"
+	"github.com/gihyunk/dd-trace-go/internal/version"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

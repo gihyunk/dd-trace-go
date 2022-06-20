@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gihyunk/dd-trace-go.v1/internal/log"
+	"github.com/gihyunk/dd-trace-go/internal/log"
 
 	"github.com/DataDog/datadog-go/v5/statsd"
 	"github.com/DataDog/sketches-go/ddsketch"
